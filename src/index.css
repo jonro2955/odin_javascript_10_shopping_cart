@@ -1,4 +1,10 @@
-#root{
+#root {
   background-color: antiquewhite;
 }
 
+#homepage {
+  background-image: url('./images/bg.jpg');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
