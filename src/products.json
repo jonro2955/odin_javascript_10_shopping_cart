@@ -1,0 +1,17 @@
+[
+  {
+    "added": false,
+    "name": "red",
+    "price": 1.5
+  },
+  {
+    "added": false,
+    "name": "blue",
+    "price": 1.5
+  },
+  {
+    "added": false,
+    "name": "yellow",
+    "price": 1.5
+  }
+]
