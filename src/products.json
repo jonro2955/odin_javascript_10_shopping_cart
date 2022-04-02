@@ -1,17 +1,32 @@
 [
   {
-    "added": false,
+    "quantity": 0,
     "name": "red",
     "price": 1.5
   },
   {
-    "added": false,
+    "quantity": 0,
     "name": "blue",
     "price": 1.5
   },
   {
-    "added": false,
-    "name": "yellow",
+    "quantity": 0,
+    "name": "green",
+    "price": 1.5
+  },
+    {
+    "quantity": 0,
+    "name": "purple",
+    "price": 1.5
+  },
+  {
+    "quantity": 0,
+    "name": "white",
+    "price": 1.5
+  },
+  {
+    "quantity": 0,
+    "name": "black",
     "price": 1.5
   }
 ]

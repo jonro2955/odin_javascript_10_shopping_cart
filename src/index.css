@@ -1,10 +1,33 @@
-#root {
-  background-color: antiquewhite;
+#shopBtn {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('./images/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-decoration: none;
+  color: aliceblue;
+  font-size: 100px;
 }
 
-#homepage {
-  background-image: url('./images/bg.jpg');
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover;
+.card {
+  width:100px;
+  /* height: 100px; */
+  border: black 1px solid;
+}
+
+#productsBox{
+  padding: 20px;
+    border: black 1px solid;
+
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+.colorBox{
+  width: 30px;
+  height: 30px;
+      border: black 1px solid;
+
 }
