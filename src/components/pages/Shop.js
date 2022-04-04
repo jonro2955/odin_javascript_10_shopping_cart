@@ -3,7 +3,13 @@ import productsJson from '/home/pc/TOP/Projects/2_Full_Stack_JavaScript/odin_jav
 import Card from '../elements/Card';
 
 export default function Shop() {
+  //state
   const [data, setData] = useState(productsJson);
+
+  const addClickCallback = (event) => {
+    const clickedProductName = event.target.dataset.productname;
+    console.log(clickedProductName);
+  };
 
   return (
     <div id='shopPage'>
@@ -15,15 +21,10 @@ export default function Shop() {
             name={prod.name}
             color={prod.color}
             quantity={prod.quantity}
-            clickHandler={clickCallback}
+            addClickHandler={addClickCallback}
           />
         ))}
       </div>
     </div>
   );
 }
-
-const clickCallback = () => {
-  console.log('click');
-  //use setData to increment the quantity of the clicked data item
-};
