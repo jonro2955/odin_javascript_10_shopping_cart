@@ -4,24 +4,31 @@ import Card from '../elements/Card';
 
 export default function Shop() {
   //state
-  const [data, setData] = useState(productsJson);
+  const [orderForm, setOrderForm] = useState(productsJson);
 
-  const addClickCallback = (event) => {
-    const clickedProductName = event.target.dataset.productname;
-    console.log(clickedProductName);
+  const updateOrderForm = (event) => {
+    const name = event.target.dataset.name;
+    const quantity = event.target.dataset.count;
+    let tmp = orderForm;
+    tmp.forEach((item) => {
+      if (item.name === name) {
+        item.quantity = quantity;
+      }
+    });
+    setOrderForm(tmp);
+    console.log(orderForm);
   };
 
   return (
     <div id='shopPage'>
       <h1> Shop </h1>
       <div id='productsBox'>
-        {data.map((prod, i) => (
+        {orderForm.map((prod, i) => (
           <Card
             key={i}
             name={prod.name}
             color={prod.color}
-            quantity={prod.quantity}
-            addClickHandler={addClickCallback}
+            addBtnClickHandler={updateOrderForm}
           />
         ))}
       </div>
