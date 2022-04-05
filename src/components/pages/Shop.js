@@ -1,44 +1,30 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import productsJson from '/home/pc/TOP/Projects/2_Full_Stack_JavaScript/odin_javascript_10_shopping_cart/src/products.json';
-import Card from '../elements/Card';
+import ProductCard from '../elements/ProductCard';
 
-export default function Shop() {
-  //state
-  const [orderForm, setOrderForm] = useState(productsJson);
-  const [cartCount, setCartCount] = useState(0);
+/**
+ * Must move the states to the parent and use props to alter them so that they are available to
+ * sibling "Cart"
+ */
 
-  const updateOrder = (event) => {
-    const name = event.target.dataset.name;
-    const quantity = event.target.dataset.count;
-    let tempForm = orderForm;
-    let tmpCount = 0;
-    tempForm.forEach((item) => {
-      if (item.name === name) {
-        item.quantity = quantity;
-      }
-      tmpCount += Number(item.quantity);
-    });
-    setOrderForm(tempForm);
-    setCartCount(tmpCount);
-    console.log(orderForm);
-  };
+export default function Shop(props) {
 
   return (
     <div id='shopPage'>
-      <div id='shopHeading'>
+      <div id='shopHeadingDiv'>
         <h1> Shop </h1>
         <Link id='cartBtn' to='/cart'>
-          {cartCount}
+          {props.cartCount}
         </Link>
       </div>
       <div id='productsBox'>
-        {orderForm.map((prod, i) => (
-          <Card
+        {props.orderForm.map((prod, i) => (
+          <ProductCard
             key={i}
             name={prod.name}
-            color={prod.color}
-            addBtnClickHandler={updateOrder}
+            quantity={prod.quantity}
+            price={prod.price}
+            updateOrder={props.updateOrder}
           />
         ))}
       </div>
