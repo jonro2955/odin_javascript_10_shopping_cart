@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <nav className='nav-wrapper red darken-3'>
       <div className='container'>
