@@ -1,4 +1,5 @@
 import CartEntry from '../elements/CartEntry';
+import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
   return (
@@ -25,6 +26,9 @@ export default function Cart(props) {
       <h1>
         Total Amount: {props.orderTotal > 0 ? '$' + props.orderTotal : ''}
       </h1>
+      <button id='checkoutBtn'>
+        <Link to='/checkout'>Checkout</Link>{' '}
+      </button>
     </div>
   );
 }

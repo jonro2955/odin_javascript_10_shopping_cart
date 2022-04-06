@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import productsJson from '/home/pc/TOP/Projects/2_Full_Stack_JavaScript/odin_javascript_10_shopping_cart/src/products.json';
 import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
+import Checkout from './components/pages/Checkout';
 import Cart from './components/pages/Cart';
 import Navbar from './components/elements/Navbar';
 
@@ -110,6 +111,7 @@ export default function App() {
             />
           }
         />
+        <Route path='/checkout' element={<Checkout cartCount={cartCount} />} />
       </Routes>
     </BrowserRouter>
   );
