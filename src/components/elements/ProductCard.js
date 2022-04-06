@@ -4,6 +4,8 @@ export default function ProductCard(props) {
   //JS style object: To use, assign this constant to a style attribute of an element
   const myStyle = { backgroundColor: props.name };
 
+  /*The count value in this component will not depend on props.
+  It will always start from 0 */
   const [count, setCount] = useState(0);
 
   function incrementCount() {

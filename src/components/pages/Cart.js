@@ -13,16 +13,18 @@ export default function Cart(props) {
                 name={prod.name}
                 quantity={prod.quantity}
                 price={prod.price}
-                orderForm={props.orderForm}
-                updateOrder={props.updateOrder}
                 incrementItem={props.incrementItem}
                 decrementItem={props.decrementItem}
                 deleteItem={props.deleteItem}
               />
             );
-          } 
+          }
         })}
       </div>
+      <h1>Total Items: {props.cartCount}</h1>
+      <h1>
+        Total Amount: {props.orderTotal > 0 ? '$' + props.orderTotal : ''}
+      </h1>
     </div>
   );
 }

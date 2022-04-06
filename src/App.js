@@ -8,14 +8,14 @@ import Cart from './components/pages/Cart';
 import Navbar from './components/elements/Navbar';
 
 export default function App() {
-  /* App()'s states orderForm and cartCount will be global. They and 
-  functions that modify them will passed down as props to child 
-  components <Shop/> and <Cart/> . This is so that the 
-  <Shop/> and <Cart/> both use the same info to display 
-  to the user, and anything changed in one component is also changed 
-  in the other*/
+  /* The following states orderForm and cartCount will be global. 
+  They and functions that modify them can be passed down as props to 
+  child components <Shop/> and <Cart/> so that they both use the same 
+  info to display to the user, and anything changed in one component is 
+  also changed in the other*/
   const [orderForm, setOrderForm] = useState(productsJson);
   const [cartCount, setCartCount] = useState(0);
+  const [orderTotal, setOrderTotal] = useState(0);
 
   function incrementItem(event) {
     const name = event.target.dataset.name;
@@ -59,7 +59,7 @@ export default function App() {
     console.log(orderForm);
   }
 
-  const updateOrder = (event) => {
+  function updateOrder(event) {
     const name = event.target.dataset.name;
     const quantity = Number(event.target.dataset.count);
     let tempForm = orderForm;
@@ -72,7 +72,15 @@ export default function App() {
     });
     setOrderForm(tempForm);
     setCartCount(tmpCartCount);
-  };
+  }
+
+  useEffect(() => {
+    let tempAmount = 0;
+    orderForm.forEach((item) => {
+      tempAmount += item.price * item.quantity;
+    });
+    setOrderTotal(tempAmount);
+  });
 
   return (
     <BrowserRouter>
@@ -95,7 +103,7 @@ export default function App() {
             <Cart
               orderForm={orderForm}
               cartCount={cartCount}
-              updateOrder={updateOrder}
+              orderTotal={orderTotal}
               incrementItem={incrementItem}
               decrementItem={decrementItem}
               deleteItem={deleteItem}
