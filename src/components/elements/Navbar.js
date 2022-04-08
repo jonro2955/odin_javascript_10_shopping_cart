@@ -7,11 +7,11 @@ export default function Navbar(props) {
         <Link
           className='brand-logo left'
           id='logo'
-          to='/odin_javascript_10_shopping_cart'
+          to='/'
         ></Link>
         <ul className='right'>
           <li>
-            <Link to='/odin_javascript_10_shopping_cart'>Home</Link>
+            <Link to='/'>Home</Link>
           </li>
           <li>
             <Link to='/shop'>Shop</Link>

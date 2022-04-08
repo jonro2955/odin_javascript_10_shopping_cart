@@ -10,7 +10,7 @@ export default function Home(props) {
           {props.cartCount}
         </Link>
       </div>
-      <h3>We the hue you're looking for.</h3>
+      <h3>We have the hue you're looking for.</h3>
       <Link id='shopBtn' to='/shop'>
         Shop
       </Link>

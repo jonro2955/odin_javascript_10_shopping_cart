@@ -10,8 +10,7 @@ This project is a mini shopping website built using React. The goal is to demons
 
 - React hooks: useState, useEffect, useRef.
 - React states and props to enable data sharing between components.
-- React testing.
-- Managing component lifecycle events with useEffect and its dependency array.
+- React testing using Jest.
 
 ### Tools
 

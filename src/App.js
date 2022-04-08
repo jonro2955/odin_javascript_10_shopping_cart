@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 //Must run 'npm i react-router-dom' before you can use router:
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import productsJson from '/home/pc/TOP/Projects/2_Full_Stack_JavaScript/odin_javascript_10_shopping_cart/src/products.json';
 import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
@@ -10,8 +10,8 @@ import Navbar from './components/elements/Navbar';
 
 export default function App() {
   /* The following states will be global. 
-  They and functions that modify them can be passed down as props to 
-  child components like <Shop/> and <Cart/> so that they use the same 
+  These and functions that modify them can be passed down as props to 
+  child components like <Shop/> and <Cart/> so that they all use the same 
   info to display to the user, and anything changed in one component is 
   also changed in the other*/
   const [orderForm, setOrderForm] = useState(productsJson);
@@ -84,11 +84,11 @@ export default function App() {
   });
 
   return (
-    <BrowserRouter>
+    <HashRouter basename='/'>
       <Navbar />
       <Routes>
         <Route
-          path='/odin_javascript_10_shopping_cart'
+          path='/'
           element={<Home cartCount={cartCount} />}
         />
         <Route
@@ -114,8 +114,11 @@ export default function App() {
             />
           }
         />
-        <Route path='/checkout' element={<Checkout cartCount={cartCount} />} />
+        <Route
+          path='/checkout'
+          element={<Checkout cartCount={cartCount} />}
+        />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
