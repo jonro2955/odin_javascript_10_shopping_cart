@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 export default function Cart(props) {
   return (
-    <div id='cartPage'>
+    <div id='cartPage' className='container'>
       <h1> Cart </h1>
-      <div id='productsBox'>
+      <div id='cartBox'>
         {props.orderForm.map((prod, i) => {
           if (prod.quantity > 0) {
             return (
@@ -26,7 +26,7 @@ export default function Cart(props) {
       <h1>
         Total Amount: {props.orderTotal > 0 ? '$' + props.orderTotal : ''}
       </h1>
-      <button id='checkoutBtn'>
+      <button className='btn-large waves-light red'>
         <Link to='/checkout'>Checkout</Link>{' '}
       </button>
     </div>

@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 
 export default function Home(props) {
   return (
-    <div id='homepage'>
+    <div id='homepage' className='container'>
       <div id='shopHeadingDiv'>
         <h1>Welcome to Spectrum</h1>
-        <Link id='cartBtn' to='/cart'>
+        <Link className='cartBtn' to='/cart'>
           {props.cartCount}
         </Link>
       </div>
-      <div>We the hue you're looking for.</div>
+      <h3>We the hue you're looking for.</h3>
       <Link id='shopBtn' to='/shop'>
         Shop
       </Link>
