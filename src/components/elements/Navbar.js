@@ -2,9 +2,9 @@ import { Link } from 'react-router-dom';
 
 export default function Navbar(props) {
   return (
-    <nav className='nav-wrapper red darken-3'>
+    <nav className='nav-wrapper'>
       <div className='container'>
-        <a href='/'>Logo</a>
+        <Link className='brand-logo left' id='logo' to='/'></Link>
         <ul className='right'>
           <li>
             <Link to='/'>Home</Link>

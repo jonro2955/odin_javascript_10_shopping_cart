@@ -9,9 +9,9 @@ import Cart from './components/pages/Cart';
 import Navbar from './components/elements/Navbar';
 
 export default function App() {
-  /* The following states orderForm and cartCount will be global. 
+  /* The following states will be global. 
   They and functions that modify them can be passed down as props to 
-  child components <Shop/> and <Cart/> so that they both use the same 
+  child components like <Shop/> and <Cart/> so that they use the same 
   info to display to the user, and anything changed in one component is 
   also changed in the other*/
   const [orderForm, setOrderForm] = useState(productsJson);
