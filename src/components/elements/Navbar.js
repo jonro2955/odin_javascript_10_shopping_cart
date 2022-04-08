@@ -4,10 +4,14 @@ export default function Navbar(props) {
   return (
     <nav className='nav-wrapper'>
       <div className='container'>
-        <Link className='brand-logo left' id='logo' to='/'></Link>
+        <Link
+          className='brand-logo left'
+          id='logo'
+          to='/odin_javascript_10_shopping_cart'
+        ></Link>
         <ul className='right'>
           <li>
-            <Link to='/'>Home</Link>
+            <Link to='/odin_javascript_10_shopping_cart'>Home</Link>
           </li>
           <li>
             <Link to='/shop'>Shop</Link>

@@ -87,7 +87,10 @@ export default function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path='/' element={<Home cartCount={cartCount} />} />
+        <Route
+          path='/odin_javascript_10_shopping_cart'
+          element={<Home cartCount={cartCount} />}
+        />
         <Route
           path='/shop'
           element={
