@@ -17,7 +17,7 @@ This project is a mini shopping website built using React. The goal is to demons
 - ReactJS
 - React testing library
 - Jest-dom testing library for React
-- react-router-dom
+- React-router-dom
 
 
 ### Acknowledgements
