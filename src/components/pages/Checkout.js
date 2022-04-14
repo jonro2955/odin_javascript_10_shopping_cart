@@ -9,7 +9,7 @@ export default function Checkout(props) {
           {props.cartCount}
         </Link>
       </div>
-      <h1>This part is left intentionally blank</h1>
+      <h1>This page is left intentionally blank</h1>
     </div>
   );
 }

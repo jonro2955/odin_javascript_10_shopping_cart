@@ -8,9 +8,9 @@ This project is a mini shopping website built using React. The goal is to demons
 
 ### Focus
 
-- React hooks: useState, useEffect, useRef.
-- React states and props to enable data sharing between components.
-- React testing using Jest.
+- React hooks: useState, useEffect, useRef
+- React states and props to enable data sharing between components
+- React testing using Jest
 
 ### Tools
 
