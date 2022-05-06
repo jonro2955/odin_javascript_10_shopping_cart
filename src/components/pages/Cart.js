@@ -19,12 +19,15 @@ export default function Cart(props) {
                 deleteItem={props.deleteItem}
               />
             );
+          } else {
+            return '';
           }
         })}
       </div>
       <h1>Total Items: {props.cartCount}</h1>
       <h1>
-        Total Amount: {props.orderTotal > 0 ? '$' + props.orderTotal : ''}
+        Total Amount:{' '}
+        {props.orderTotal > 0 ? '$' + props.orderTotal.toFixed(2) : ''}
       </h1>
       <button className='btn-large waves-light red'>
         <Link to='/checkout'>Checkout</Link>{' '}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 //Must run 'npm i react-router-dom' before you can use router:
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import productsJson from '/home/pc/TOP/Projects/2_Full_Stack_JavaScript/odin_javascript_10_shopping_cart/src/products.json';
@@ -81,7 +81,7 @@ export default function App() {
       tempAmount += item.price * item.quantity;
     });
     setOrderTotal(tempAmount);
-  });
+  },[]);
 
   return (
     <HashRouter basename='/'>
