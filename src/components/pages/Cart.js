@@ -1,7 +1,13 @@
 import CartEntry from '../elements/CartEntry';
 import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 
 export default function Cart(props) {
+  const [total, setTotal] = useState(0);
+  useEffect(() => {
+    setTotal(props.orderTotal);
+  }, [props.orderTotal]);
+
   return (
     <div id='cartPage' className='container'>
       <h1> Cart </h1>
@@ -25,10 +31,7 @@ export default function Cart(props) {
         })}
       </div>
       <h1>Total Items: {props.cartCount}</h1>
-      <h1>
-        Total Amount:{' '}
-        {props.orderTotal > 0 ? '$' + props.orderTotal.toFixed(2) : ''}
-      </h1>
+      <h1>Total Amount: {total.toFixed(2)}</h1>
       <button className='btn-large waves-light red'>
         <Link to='/checkout'>Checkout</Link>{' '}
       </button>

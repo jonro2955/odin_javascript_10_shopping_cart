@@ -28,7 +28,6 @@ export default function App() {
     tmpCartCount++;
     setOrderForm(tempForm);
     setCartCount(tmpCartCount);
-    console.log(orderForm);
   }
 
   function decrementItem(event) {
@@ -41,7 +40,6 @@ export default function App() {
     tmpCartCount--;
     setOrderForm(tempForm);
     setCartCount(tmpCartCount);
-    console.log(orderForm);
   }
 
   function deleteItem(event) {
@@ -57,7 +55,6 @@ export default function App() {
     });
     setOrderForm(tempForm);
     setCartCount(tmpCartCount - deleteCount);
-    console.log(orderForm);
   }
 
   function updateOrder(event) {
@@ -81,16 +78,16 @@ export default function App() {
       tempAmount += item.price * item.quantity;
     });
     setOrderTotal(tempAmount);
-  },[]);
+    // console.log(orderForm);
+  }, [cartCount]);
+
+  useEffect(() => {}, [orderTotal]);
 
   return (
     <HashRouter basename='/'>
       <Navbar />
       <Routes>
-        <Route
-          path='/'
-          element={<Home cartCount={cartCount} />}
-        />
+        <Route path='/' element={<Home cartCount={cartCount} />} />
         <Route
           path='/shop'
           element={
@@ -114,10 +111,7 @@ export default function App() {
             />
           }
         />
-        <Route
-          path='/checkout'
-          element={<Checkout cartCount={cartCount} />}
-        />
+        <Route path='/checkout' element={<Checkout cartCount={cartCount} />} />
       </Routes>
     </HashRouter>
   );
