@@ -23,7 +23,7 @@ export default function ProductCard(props) {
   return (
     <div className='card'>
       <h3>{props.name.toUpperCase()}</h3>
-      <div>Price: ${props.price}</div>
+      <div>Price: ${props.price.toFixed(2)}</div>
       <div className='colorBox' style={myStyle}></div>
       <div>Quantity:</div>
       <div className='cardInputRow'>

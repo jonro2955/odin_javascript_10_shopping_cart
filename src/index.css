@@ -10,7 +10,12 @@ for firefox: */
 input[type='number'] {
   -moz-appearance: textfield;
 }
-
+#homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 #shopBtn {
   width: 300px;
   height: 300px;
@@ -50,6 +55,8 @@ input[type='number'] {
   text-decoration: none;
   font-size: x-large;
   padding-top: 10px;
+  position: absolute;
+  right: 20%;
 }
 #shopHeadingDiv {
   display: flex;
@@ -100,7 +107,12 @@ input[type='number'] {
   grid-template-columns: auto auto auto;
   gap: 50px;
 }
-
+.centerFlex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 .colorBox {
   width: 30px;
   height: 30px;

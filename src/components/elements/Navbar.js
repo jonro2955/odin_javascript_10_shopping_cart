@@ -17,7 +17,7 @@ export default function Navbar(props) {
             <Link to='/shop'>Shop</Link>
           </li>
           <li>
-            <Link to='/cart'>Cart</Link>
+            <Link to='/cart'>Cart ({props.cartCount})</Link>
           </li>
         </ul>
       </div>

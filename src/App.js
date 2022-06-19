@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 //Must run 'npm i react-router-dom' before you can use router:
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import productsJson from '/home/pc/TOP/Projects/2_Full_Stack_JavaScript/odin_javascript_10_shopping_cart/src/products.json';
+import productsJson from './products.json';
 import Home from './components/pages/Home';
 import Shop from './components/pages/Shop';
 import Checkout from './components/pages/Checkout';
@@ -85,7 +85,7 @@ export default function App() {
 
   return (
     <HashRouter basename='/'>
-      <Navbar />
+      <Navbar cartCount ={cartCount}/>
       <Routes>
         <Route path='/' element={<Home cartCount={cartCount} />} />
         <Route
