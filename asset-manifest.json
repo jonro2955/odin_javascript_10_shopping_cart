@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/odin_javascript_10_shopping_cart/static/css/main.8e6e2a27.css",
-    "main.js": "/odin_javascript_10_shopping_cart/static/js/main.ed252d18.js",
+    "main.css": "/odin_javascript_10_shopping_cart/static/css/main.3482747c.css",
+    "main.js": "/odin_javascript_10_shopping_cart/static/js/main.bfd2b965.js",
     "static/media/bg.jpg": "/odin_javascript_10_shopping_cart/static/media/bg.cca4f4c7c1db13ded222.jpg",
     "index.html": "/odin_javascript_10_shopping_cart/index.html",
-    "main.8e6e2a27.css.map": "/odin_javascript_10_shopping_cart/static/css/main.8e6e2a27.css.map",
-    "main.ed252d18.js.map": "/odin_javascript_10_shopping_cart/static/js/main.ed252d18.js.map"
+    "main.3482747c.css.map": "/odin_javascript_10_shopping_cart/static/css/main.3482747c.css.map",
+    "main.bfd2b965.js.map": "/odin_javascript_10_shopping_cart/static/js/main.bfd2b965.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e6e2a27.css",
-    "static/js/main.ed252d18.js"
+    "static/css/main.3482747c.css",
+    "static/js/main.bfd2b965.js"
   ]
 }
